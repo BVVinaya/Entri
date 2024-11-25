@@ -1,0 +1,257 @@
+<html>
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+body{
+background-color: mediumpurple;
+}
+ header {
+  width:100%;
+  display: flex;
+  margin:auto;
+  justify-content:center;
+  background:indigo;
+  position:fixed;
+  top: 0%;
+  left:0%;
+  height: 10%;
+  z-index: 5;
+            }
+            header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color:plum;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+  font-size: large;
+  font-weight: bold;
+}
+header a:hover, footer a:hover {
+  color:black;
+}
+.container {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: larger;
+}
+.container .main {
+  display: flex;
+  align-items: center;
+}
+.container .main li {
+  position: relative;
+  list-style: none;
+}
+.container .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  color:lightslategray;
+  font-size:x-large;
+  font-family:cursive;
+}
+.icon{
+    cursor: pointer;
+}
+.seek{
+  padding-left: 10%;
+  padding-right: 10%;
+  display:flex;
+  justify-content: space-between;
+}
+.tool{
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: plum;
+  color: bisque;
+}
+.main{
+  text-align: center;
+  color:lavenderblush;
+  font-family:Georgia;
+  font-weight:bolder;
+  
+}
+.expose{
+  padding-left: 5%;
+  padding-right:50%;
+}
+@media screen and (max-width: 800px) {
+  .container .main {
+    position: fixed;
+    left: -19%;
+    width: 100px;
+    display: flex;
+    height: 50px;
+    top: 40px;
+  }
+}
+  .container .main li {
+    font-size: 18px;
+  }
+
+  section > p {
+    text-align: center;
+  }
+  header{
+    height: 9%;
+  }
+  
+  @media screen and (max-width: 660px) {
+  
+}
+
+
+  
+   </style>
+    </head>
+    <body>
+        <header>
+            <nav class="container">
+              
+   <h1 class="logo"><a href="#">JOB SEEKERS</a></h1>
+     <ul class="main">
+  <a href="/home.html"><li>Home</li></a>
+ <a href="/job.html"><li>Jobs</li></a>
+ <a href="/browse.html"><li>Browse</li></a>
+   <a href="/login.html"><li>Login</li></a>
+  <a href="/signup.html"><li>Signup</li></a>
+  </ul>
+                <div class="icon">
+                    <i class="fa fa-instagram"></i> 
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i> 
+                    <i class="fa fa-linkedin"></i> 
+                    
+                </div>
+            </nav>
+        </header> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<br>
+<br>
+<br>
+<br>
+
+<h3 class="main"><mark>Choose your priority <i class="fa fa-search"></i></mark></h3>
+<br>
+<br>
+<section class="seek">
+<section class="choose">
+  <h3 class="tool">Location</h3><h5><input type="radio" name="location" id="hyderabad">
+  <label for="hyderabad"><b>Hyderabad</b></label>
+          <br>
+<input type="radio" name="location" id="delhi" >
+<label for="delhi"><b>Delhi</b></label>
+<br>
+<input type="radio" name="location" id="banglore" >
+<label for="banglore"><b>Banglore</b></label>
+<br>
+<input type="radio" name="location" id="pune" >
+<label for="pune"><b>Pune</b></label>
+<br>
+<input type="radio" name="location" id="mumbai" >
+<label for="mumbai"><b>Mumbai</b></label>
+<br>
+</h5>
+<br>
+<br>
+</section>
+<section class="choose">
+  <h3 class="tool">Salary range per annum</h3><h5><input type="radio" name="range" id="2L to 3L">
+  <label for="2L to 3L "><b>2L to 3L</b></label>
+          <br>
+<input type="radio" name="range" id="3L to 4L" >
+<label for="3L to 4L"><b>3L to 4L</b></label>
+<br>
+<input type="radio" name="range" id="5L to 10L" >
+<label for="5L to 10L "><b>5L to 10L</b></label>
+<br>
+<input type="radio" name="range" id="10L to 15L" >
+<label for="10L to 15L"><b>10L to 15L</b></label>
+<br>
+<input type="radio" name="range" id="15L to 30L" >
+<label for="15L to 30L"><b>15L to 30L</b></label>
+<br>
+</h5>
+</section>
+<section class="choose">
+  <h3 class="tool">Companies</h5><h5><input type="radio" name="job" id="it">
+  <label for="it"><b>IT</b></label>
+          <br>
+<input type="radio" name="job" id="non-it" >
+<label for="non-it"><b>NON-IT</b></label>
+<br>
+<input type="radio" name="job" id="startup" >
+<label for="startup"><b>Startup</b></label>
+<br>
+
+</h5>
+</section>
+</section>
+<!-- cards -->
+ <section class="expose">
+  <div class="card">
+    <h5 class="card-header">COGNIZANT</h5>
+    <div class="card-body">
+      <h5 class="card-title">Fullstack web developer </h5>
+      <p class="card-text">+2 experience Technical skills: java, javascript, css,html .</p>
+      <a href="#" class="btn btn-info">contact:9123456789 email:cognizant@gamil.com</a>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">INFOSYS</h5>
+    <div class="card-body">
+      <h5 class="card-title">Fullstack mobile developer </h5>
+      <p class="card-text">+3 experience Technical skills: java, javascript, css,html,react native .</p>
+      <a href="#" class="btn btn-info">contact:9123456780 email:infosys@gamil.com</a>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">MANTHATECH</h5>
+    <div class="card-body">
+      <h5 class="card-title">Fullstack web developer </h5>
+      <p class="card-text">+1 experience Technical skills: java, javascript, css,html,react .</p>
+      <a href="#" class="btn btn-info">contact:9123456709 email:manthatech@gamil.com</a>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">AMAZON</h5>
+    <div class="card-body">
+      <h5 class="card-title">Fullstack web developer </h5>
+      <p class="card-text">+5 experience Technical skills: java, javascript, css,html,springboot,react .</p>
+      <a href="#" class="btn btn-info">contact:9123456789 email:amazon@gamil.com</a>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">TCS</h5>
+    <div class="card-body">
+      <h5 class="card-title">3d modeling </h5>
+      <p class="card-text">+2 experience  skills: googlemaps,building maker,sketchup,photoshop,snipping tool .</p>
+      <a href="#" class="btn btn-info">contact:9123456700 email:tcs@gamil.com</a>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">TECH MAHINDRA</h5>
+    <div class="card-body">
+      <h5 class="card-title">Process executive </h5>
+      <p class="card-text">+3 experience  skills:google maps,excel,browsing,data entry .</p>
+      <a href="#" class="btn btn-info">contact:912345000 email:techmahindra@gamil.com</a>
+    </div>
+  </div>
+</section>
+    </body>
+    </html>
+
+

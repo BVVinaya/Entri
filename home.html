@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>JOB SEEKERS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   html{
+   scroll-behavior: smooth; 
+   }
+header {
+  width:100%;
+  display: flex;
+  margin:auto;
+  justify-content:center;
+  background:indigo;
+  position:fixed;
+  top: 0%;
+  left:0%;
+  height: 13%;
+  z-index: 5;
+}
+body{
+  background-color: mediumpurple;
+}
+.container {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: larger;
+}
+.container .main {
+  display: flex;
+  align-items: center;
+}
+.container .main li {
+  position: relative;
+  list-style: none;
+}
+.container .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  color:lightslategray;
+  font-size:x-large;
+  font-family:cursive;
+}
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color:violet;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+  font-size: x-large;
+  font-weight: bold;
+}
+header a:hover, footer a:hover {
+  color:black;
+}
+.one {
+margin-top: 80px;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("img1.jpeg");
+  background-position: center ;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.one::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.one .content {
+  display: flex;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3;
+
+}
+.one .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.one .content .text {
+  margin-bottom: 50px;
+  color:black;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px white;
+}
+.content a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background:mediumpurple;
+  border: 3px solid wheat;
+  transition: 0.4s ease;
+  box-shadow: red;
+  text-decoration: none;
+}
+.content a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+
+.cool{
+    background-color:slateblue;
+}
+.story{
+    text-align:center
+}
+.icon{
+    cursor: pointer;
+}
+.scroll{
+  text-align: center;
+}
+.info .card img {
+  width: 280px;
+  height: 180px;
+  margin-bottom: 20px;
+  border-radius:  20%;
+  object-fit: cover;
+}
+section .cards {
+  display: flex;
+  max-width: 1500px;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+section .cards .card {
+  background:plum;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px blue;
+  margin-bottom: 5px;
+  width: 290px;
+  text-align: center;
+}
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+footer {
+  width: 100%;
+  justify-content: center;
+  background:mediumpurple;
+  padding:150px 80px 20px 80px;
+  display: flex;
+}
+.contact{
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.glass{
+
+background-color:rgb(84, 8, 93);
+border-radius: 40%;
+width: 120px;
+margin-left: 30px;
+height: 60px;
+}
+@media screen and (max-width: 800px) {
+  .container .main {
+    position: fixed;
+    left: -19%;
+    width: 100px;
+    display: flex;
+    height: 10px;
+    top: 20px;
+    right:-20px
+  }
+}
+  .container .main li {
+    font-size: 18px;
+  }
+
+  section > p {
+    text-align: center;
+  }
+  
+
+</style>
+</head>
+<body>
+   <header>
+    <nav class="container">
+      
+        <h1 class="logo"><a href="#">JOB SEEKERS</a></h1>
+        <ul class="main">
+            <a href="/home.html"><li>Home</li></a>
+            <a href="/job.html"><li>Jobs</li></a>
+            <a href="/browse.html"><li>Browse</li></a>
+            <div class="glass">  <a href="/login.html"><li>Login</li></a></div>
+            <div class="glass"><a href="/signup.html"><li>Signup</li></a></div>
+           
+           
+          </ul>
+        <div class="icon">
+            <i class="fa fa-instagram"></i> 
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i> 
+            <i class="fa fa-linkedin"></i> 
+            
+        </div>
+    </nav>
+</header> 
+<section class="one" id="home">
+    <div class="content">
+      <div class="text">
+        <h1>FIND YOUR DREAM JOB </h1>
+        <h3>WE ARE HERE TO HELP YOU <h3>
+          <section class="scroll">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <h3>MNC COMPANIES</h3>
+                </div>
+                <div class="carousel-item">
+                  <h3>STARTUP COMPANIES</h3>
+                </div>
+                <div class="carousel-item">
+                  <h3>NON-IT COMPANIES</h3>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+      </div>
+      <a href="#jobs"> <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>  
+        </div>
+      </nav>
+      </a>
+       </div>
+        <!-- cards -->
+        <section class="info" id="info">
+          <ul class="cards">
+            <li class="card">
+              <img src="IMG2.png" alt="img">
+              <p>We engineer modern businesses to improve everyday life. OUR VISION. Every choice we make aligns to our vision</p>
+            </li>
+            <li class="card">
+              <img src="IMG3.jpg" alt="img">
+              <p>To be a globally respected corporation that provides best-of-breed business solutions, leveraging technology, delivered by best-in-class people</p>
+            </li>
+            <li class="card">
+              <img src="IMG4.jpg" alt="img">
+              <p>To help customers achieve their business objectives by providing innovative IT solutions and services</p>
+            </li>
+            <li class="card">
+              <img src="IMG5.webp" alt="img">
+              <p>to be the world’s most successful and vital information technology company. Successful in helping out customers apply technology to solve their problems.</p>
+            </li>
+            <li class="card">
+              <img src="IMG6.png" alt="img">
+              <p>Our vision is to be earth's most customer-centric company; to build a place where people can come to find and discover anything they might want to buy online.</p>
+            </li>
+          </ul>
+        </section>
+         <br>
+         <br>
+         <br>
+
+  </section>
+<footer>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <h3>Reach out for any inquiries.</h3>
+    
+      <div class="col form">
+        <form>
+          <input type="text" placeholder="Name" required>
+          <br>
+          <input type="email" placeholder="Email" required>
+          <br>
+          <input type="text" placeholder="Suggestion"required>
+          <br>
+          <button id="submit" type="submit">Send Message</button>
+          <br>
+          <div class="row">
+            <div class="col information">
+              <div class="contact-details">
+                <span><i class="fa fa-envelope"></i> info@jobseekers.com</span>
+             <span><i class="fa fa-phone"></i> (+91) 9298765430</span>   
+                <i class="fa fa-globe"></i> www.job.comseekers  
+                
+              </div>          
+            </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
