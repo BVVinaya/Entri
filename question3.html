@@ -3,58 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>question3</title>
 </head>
+<style>
+
+    h1{
+        text-align: center;
+        background-color: purple;
+    }
+   .main>a{
+        list-style: none;
+        border: 2px solid blueviolet;
+        margin:50px;
+        text-align: center;
+        background-color:whitesmoke;
+        border-radius: 12%;
+        font-size: xx-large;
+        text-decoration: none;
+   }
+   #clock {
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+            color: #333;
+        }
+        #stopButton {
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #stopButton:hover {
+            background-color: #d32f2f;
+        }
+        #startButton{
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color:green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #startButton:hover {
+            background-color:green;
+        }
+</style>
 <body>
-    <style>
-        h1{
-            text-align: center;
-            background-color: brown;
-    
-        }
-       .main>a{
-            list-style: none;
-            border: 2px solid blueviolet;
-            margin:50px;
-            text-align: center;
-            background-color: aqua;
-            border-radius: 12%;
-            font-size: xx-large;
-            text-decoration: none;
-        }
-        button{
-            color: red;
-        }
-    </style>
-    <body>
-       <h1>ASSIGNMENT 2</h1>
+       <h1>ASSIGNMENT 3</h1>
        <section class="main">
        <a href="question1.html">QUESTION 1</a>
        <a href="question2.html">QUESTION 2</a>
        <a href="question3.html">QUESTION 3</a>
        <a href="question4.html">QUESTION 4</a>
     </section> 
-  <br>
-  <br>
-  <br>
-  <form >
-    <label for="name">Name:</label>
-    <input type="text" id="name" placeholder="Enter your name"required>
     <br>
     <br>
-    <label for="course">course:</label>
-    <input type="text" id="course" placeholder="enter your course"required>
     <br>
-    <br>
-    <button onclick="func()">submit</button>
-  </form>  
-  <script>
-    function func(){
-        let val1=document.getElementById('name').value;
-        let val2=document.getElementById('course').value;
-        alert('user entered as:'+val1+'and'+val2);
-        alert('sucessfully submitted')
-    }
-  </script>
+    <div id="clock"></div>
+    <button id="startButton">Start</button>
+    <button id="stopButton"disabled>Stop</button>
+
+    <script>
+        function startClock() {
+main=setInterval(()=>{
+    let a = new Date().getHours();
+    let b = new Date().getMinutes();
+    let c = new Date().getSeconds();
+
+    console.log(`${a}:${b}:${c}`);
+    document.getElementById('clock').innerHTML = `${a}:${b}:${c}`;
+},1000);
+document.getElementById('startButton').disabled = true;
+document.getElementById('stopButton').disabled = false;
+
+}
+function stopClock() {
+    clearInterval(main);  
+    document.getElementById('startButton').disabled = false;
+    document.getElementById('stopButton').disabled = true;
+}
+
+document.getElementById('startButton').addEventListener('click', startClock);
+document.getElementById('stopButton').addEventListener('click', stopClock);
+
+    </script>
 </body>
 </html>

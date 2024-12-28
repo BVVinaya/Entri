@@ -9,29 +9,21 @@
 
     h1{
         text-align: center;
-        background-color: brown;
+        background-color: purple;
     }
    .main>a{
         list-style: none;
         border: 2px solid blueviolet;
         margin:50px;
         text-align: center;
-        background-color: aqua;
+        background-color:whitesmoke;
         border-radius: 12%;
         font-size: xx-large;
         text-decoration: none;
-        
-    }
-    h2{
-        color:red
-    }
-    button{
-        color:green;
-        text-align: center;
-    }
+   }
 </style>
 <body>
-       <h1>ASSIGNMENT 2</h1>
+       <h1>ASSIGNMENT 3</h1>
        <section class="main">
        <a href="question1.html">QUESTION 1</a>
        <a href="question2.html">QUESTION 2</a>
@@ -41,11 +33,22 @@
     <br>
     <br>
     <br>
-    <h2 id="hello">MY NAME IS VINAYA </h2>
-    <button onclick="func()"> Click</button>
+    
     <script>
-        function func(){
-            document.getElementById('hello').innerHTML="MY SURNAME IS BEJAWADA VINAYA"
+        function fnum(input){
+            if(input<=1){
+                return 0;
+            }
+            else if(input===2){
+                return 1;
+            }
+            else{
+                return fnum(input-1)+fnum(input-2)
+            }
+        }
+        let n=parseInt(prompt('enter a number to give a fibonacci series'))
+        for(let i=1;i<=n;i++){
+            console.log(fnum(i));
         }
     </script>
 </body>
