@@ -3,32 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Javascript Assignment 3</title>
+    <title>Rock-Paper-Scissors</title>
 </head>
 <style>
-    h1{
-        text-align: center;
-        background-color:purple;
-
+    body{
+        background-color:cadetblue
     }
-   .main>a{
-        list-style: none;
-        text-decoration:none ;
-        border: 2px solid pink;
-        margin:50px;
+    h1{
+        color:whitesmoke;
         text-align: center;
-        background-color:whitesmoke;
-        border-radius: 12%;
+        background-color: black;
+        margin-top:2%;
+    }
+    .container{
+        width:50%;
+        background-color: palevioletred;
+        height:80vh;
+        padding:20px;
+        margin-left: 20%;
+        box-shadow: 0 0 10px red;
+    }
+    .imgcontainer{
+        display:flex;
+        gap:10px;
+        justify-content: center;
+        margin: 10%;
+        margin-top: 5%;
+    }
+    .imgcontainer img{
+        width:220px;
+        height:220px;
+        border-radius:50%;
+        cursor: pointer;
+        border: 10px solid skyblue;
+        transition: 0.5s ease-in-out;
+    }
+    .imgcontainer img:hover{
+        transform: scale(80%);
+    }
+    .Result{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
         font-size: xx-large;
     }
+    .Result button{
+        width:80%;
+        padding:4px;
+        background-color:lightsalmon;
+        border:none;
+        transition: 0.5e ease-in-out;
+        border: 2px solid black;
+    }
+    .Result button:hover{
+        transform: scale(90%);
+    }
+    #btn{
+        font-size: x-large;
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .displaybox{
+        display:flex;
+        gap:40px;
+        justify-content: center;
+        margin-top:30px ;
+        font-size: x-large;
+    }
+    .roundBox{
+        display: flex;
+        justify-content: center;
+        font-size: large;
+        margin-top: 10px;
+    }
+    #resetBtn{
+        background-color: green;
+    }
+    @media screen and (max-width: 800px) {
+        .imgcontainer {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 </style>
+
 <body>
-   <h1>ASSIGNMENT 3</h1>
-   <section class="main">
-   <a href="question1.html">QUESTION 1</a>
-   <a href="question2.html">QUESTION 2</a>
-   <a href="question3.html">QUESTION 3</a>
-   <a href="question4.html">QUESTION 4</a>
-</section> 
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="container">
+        <div class="imgcontainer">
+            <img src="rock.jpg" id="rock" alt="rock">
+            <img src="paper.jpg" id="paper" alt="paper">
+            <img src="scissors.jpg" id="scissors" alt="scissors">
+        </div>
+
+        <div class="displaybox">
+            <div class="leftdiv">
+                <h4>User score</h4>
+                <p>Score: <span id="userScore">0</span></p>
+            </div>
+            <div class="rightdiv">
+                <h4>Computer score</h4>
+                <p>Score: <span id="compScore">0</span></p>
+            </div>
+        </div>
+
+        <div class="roundBox">
+            <h4>Round: <span id="roundCounter">1</span></h4>
+        </div>
+
+        <div class="Result">
+            <button id="btn">Result</button>
+        </div>
+
+        <div class="Result">
+            <button id="resetBtn">Reset Game</button>
+        </div>
+    </div>
+
+    <script>
+        let Allimg = document.querySelectorAll('.imgcontainer img');
+        let userChoice;
+        let compChoice;
+        let userScore = 0;
+        let compScore = 0;
+        let round = 1;
+
+        const roundCounter = document.getElementById('roundCounter');
+        const userScoreDisplay = document.getElementById('userScore');
+        const compScoreDisplay = document.getElementById('compScore');
+        const resultBtn = document.getElementById('btn');
+
+        function compChoicefunc() {
+            let arr = ["rock", "paper", "scissors"];
+            let var1 = Math.floor(Math.random() * 3);
+            compChoice = arr[var1];
+            return compChoice;
+        }
+
+        
+        function gameImp(u) {
+            compChoice = compChoicefunc();
+            alert(`User selected ${userChoice} and computer selected ${compChoice}`);
+
+            if (compChoice === userChoice) {
+                resultBtn.innerHTML = `Round ${round}: It's a Draw!`;
+            } else if (
+                (compChoice === "rock" && userChoice === "paper") ||
+                (compChoice === "scissors" && userChoice === "rock") ||
+                (compChoice === "paper" && userChoice === "scissors")
+            ) {
+                resultBtn.innerHTML = `Round ${round}: You Won!`;
+                userScore++;
+                userScoreDisplay.innerHTML = userScore;
+            } else {
+                resultBtn.innerHTML = `Round ${round}: Computer Won!`;
+                compScore++;
+                compScoreDisplay.innerHTML = compScore;
+            }
+
+            round++;
+            roundCounter.innerHTML = round;
+        }
+
+        Allimg.forEach((i) => {
+            i.addEventListener('click', () => {
+                userChoice = i.id;
+                gameImp(userChoice);
+            });
+        });
+
+      
+        const resetBtn = document.getElementById('resetBtn');
+        resetBtn.addEventListener('click', () => {
+            userScore = 0;
+            compScore = 0;
+            round = 1;
+            userScoreDisplay.innerHTML = userScore;
+            compScoreDisplay.innerHTML = compScore;
+            roundCounter.innerHTML = round;
+            resultBtn.innerHTML = 'Result';
+        });
+    </script>
 </body>
 </html>
